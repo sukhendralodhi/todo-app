@@ -34,22 +34,23 @@
     <main class="mt-8 max-w-lg mx-auto">
         <div class="container mx-auto px-8 sm:px-0">
             <h1 class="text-center text-3xl py-4 my-4 font-bold underline underline-offset-4">Create Your New Task</h1>
-            <form class="flex flex-col space-y-4">
-                <input class="border-2 py-1.5 rounded px-4 outline-none" type="text" placeholder="Your Task...">
-                <select class="border-2 py-1.5 rounded px-4 outline-none" name="type" id="">
+            <form id="form-ele" class="flex flex-col space-y-4">
+                <input id="task" class="border-2 py-1.5 rounded px-4 outline-none" type="text"
+                    placeholder="Your Task...">
+                <select class="border-2 py-1.5 rounded px-4 outline-none" name="type" id="t-type">
                     <option>Select your type</option>
                     <option value="assignment">Assignment</option>
                     <option value="evaluation">Evaluation</option>
                     <option value="quiz">Quiz</option>
                 </select>
-                <input class="border-2 py-1.5 rounded px-4 outline-none" type="date">
-                <select class="border-2 py-1.5 rounded px-4 outline-none" name="type" id="">
+                <input id="t-date" class="border-2 py-1.5 rounded px-4 outline-none" type="date">
+                <select class="border-2 py-1.5 rounded px-4 outline-none" name="type" id="t-prio">
                     <option>Select Priority</option>
                     <option value="low">Low</option>
                     <option value="medium">Medium</option>
                     <option value="urgent">Urgent</option>
                 </select>
-                <input
+                <input id="btn"
                     class="border-2 py-1.5 rounded px-4 outline-none cursor-pointer bg-gray-200 font-bold transition-all delay-100 duration-100 ease-in-out hover:bg-gray-300"
                     type="submit" value="Submit">
             </form>
@@ -57,29 +58,21 @@
     </main>
 
     <div class="max-w-lg mx-auto my-8 flex flex-col justify-center px-4 sm:px-0">
-        <table>
-            <tr class="p-4 text-center">
-                <th class="bg-green-400 text-white py-1.5 px-2">Task Name</th>
-                <th class="bg-green-400 text-white py-1.5 px-2">Task Type</th>
-                <th class="bg-green-400 text-white py-1.5 px-2">Date</th>
-                <th class="bg-green-400 text-white py-1.5 px-2">Priority</th>
-            </tr>
-
-            <tr class="text-center my-2 border-2">
-                <td class="py-1 text-sm sm:text-lg">Write one page writing</td>
-                <td class="py-1 text-sm sm:text-lg">Assignment</td>
-                <td class="py-1 text-sm sm:text-lg">05/01/20023</td>
-                <td class="py-1 text-sm sm:text-lg">urgent</td>
-            </tr>
-
-            <tr class="text-center my-2 border-2">
-                <td class="py-1 text-sm sm:text-lg">Write one page writing</td>
-                <td class="py-1 text-sm sm:text-lg">Assignment</td>
-                <td class="py-1 text-sm sm:text-lg">05/01/20023</td>
-                <td class="py-1 text-sm sm:text-lg">urgent</td>
-            </tr>
+        <table id="data-container">
+            <tbody>
+                <tr class="p-4 text-center">
+                    <th class="bg-green-400 text-white py-1.5 px-2">Task Name</th>
+                    <th class="bg-green-400 text-white py-1.5 px-2">Task Type</th>
+                    <th class="bg-green-400 text-white py-1.5 px-2">Date</th>
+                    <th class="bg-green-400 text-white py-1.5 px-2">Priority</th>
+                </tr>
+                    <!-- data goes here  -->
+            </tbody>
         </table>
     </div>
+
+    <!-- JavaScript  -->
+    <script src="app.js"></script>
 </body>
 
 </html>
