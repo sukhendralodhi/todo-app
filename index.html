@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo - App</title>
+    <!-- tailwind css  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font awesome  -->
+    <script src="https://kit.fontawesome.com/b8bae2bd97.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="h-16 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center h-16 px-8">
+            <div class="text-3xl">
+                Todo App
+            </div>
+            <div class="text-2xl sm:hidden">
+                <i class="fas fa-solid fa-bars"></i>
+            </div>
+            <nav class="hidden sm:block">
+                <ul class="flex space-x-4">
+                    <li class="cursor-pointer hover:underline hover:underline-offset-2">Home Page</li>
+                    <li class="cursor-pointer hover:underline hover:underline-offset-2">Completed Task</li>
+                    <li class="cursor-pointer hover:underline hover:underline-offset-2">Favourites</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="mt-8 max-w-lg mx-auto">
+        <div class="container mx-auto px-8 sm:px-0">
+            <h1 class="text-center text-3xl py-4 my-4 font-bold underline underline-offset-4">Create Your New Task</h1>
+            <form class="flex flex-col space-y-4">
+                <input class="border-2 py-1.5 rounded px-4 outline-none" type="text" placeholder="Your Task...">
+                <select class="border-2 py-1.5 rounded px-4 outline-none" name="type" id="">
+                    <option>Select your type</option>
+                    <option value="assignment">Assignment</option>
+                    <option value="evaluation">Evaluation</option>
+                    <option value="quiz">Quiz</option>
+                </select>
+                <input class="border-2 py-1.5 rounded px-4 outline-none" type="date">
+                <select class="border-2 py-1.5 rounded px-4 outline-none" name="type" id="">
+                    <option>Select Priority</option>
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="urgent">Urgent</option>
+                </select>
+                <input
+                    class="border-2 py-1.5 rounded px-4 outline-none cursor-pointer bg-gray-200 font-bold transition-all delay-100 duration-100 ease-in-out hover:bg-gray-300"
+                    type="submit" value="Submit">
+            </form>
+        </div>
+    </main>
+
+    <div class="max-w-lg mx-auto my-8 flex flex-col justify-center px-4 sm:px-0">
+        <table>
+            <tr class="p-4 text-center">
+                <th class="bg-green-400 text-white py-1.5 px-2">Task Name</th>
+                <th class="bg-green-400 text-white py-1.5 px-2">Task Type</th>
+                <th class="bg-green-400 text-white py-1.5 px-2">Date</th>
+                <th class="bg-green-400 text-white py-1.5 px-2">Priority</th>
+            </tr>
+
+            <tr class="text-center my-2 border-2">
+                <td class="py-1 text-sm sm:text-lg">Write one page writing</td>
+                <td class="py-1 text-sm sm:text-lg">Assignment</td>
+                <td class="py-1 text-sm sm:text-lg">05/01/20023</td>
+                <td class="py-1 text-sm sm:text-lg">urgent</td>
+            </tr>
+
+            <tr class="text-center my-2 border-2">
+                <td class="py-1 text-sm sm:text-lg">Write one page writing</td>
+                <td class="py-1 text-sm sm:text-lg">Assignment</td>
+                <td class="py-1 text-sm sm:text-lg">05/01/20023</td>
+                <td class="py-1 text-sm sm:text-lg">urgent</td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
